@@ -61,6 +61,8 @@
   const errorText = document.getElementById("errorText");
   const customFooterP = document.getElementById("customFooterP");
   const githubCorner = document.getElementById("githubCorner");
+  const shareBtn = document.getElementById("shareBtn");
+  const shareBtnText = document.getElementById("shareBtnText");
 
   const inputGroup = document.getElementById("inputGroup");
   const quickAmountsEl = document.getElementById("quickAmounts");
@@ -107,6 +109,7 @@
       previewReceived.textContent = "—";
       sendBtn.disabled = true;
       sendBtnText.textContent = "Enter an amount";
+      shareBtn.style.display = "none";
       return;
     }
 
@@ -117,6 +120,7 @@
     previewReceived.innerHTML = getRobuxHTML(fmtRobux(received));
     sendBtn.disabled = false;
     sendBtnText.innerHTML = `Send ${getRobuxHTML(fmtRobux(amount))}`;
+    shareBtn.style.display = "inline-flex";
   }
 
   amountInput.addEventListener("input", () => {
@@ -167,6 +171,11 @@
     toggleRow.style.display = display;
     preview.style.display = display;
     sendBtn.style.display = display;
+    if (!show) {
+      shareBtn.style.display = "none";
+    } else if (currentAmount != null) {
+      shareBtn.style.display = "inline-flex";
+    }
     if (show) {
       resultPanel.hidden = true;
       resultPanel.style.display = "none";
@@ -313,6 +322,50 @@
       btn.innerHTML = getRobuxHTML(fmtCompact(amt));
       quickAmounts.appendChild(btn);
     });
+  }
+
+  shareBtn.addEventListener("click", () => {
+    if (currentAmount == null) return;
+    try {
+      const url = new URL(window.location.origin + window.location.pathname);
+      url.searchParams.set("amount", String(currentAmount));
+      url.searchParams.set("coverTax", String(coverTax));
+      
+      navigator.clipboard.writeText(url.toString()).then(() => {
+        const oldText = shareBtnText.textContent;
+        shareBtnText.textContent = "Link Copied!";
+        shareBtn.style.borderColor = "var(--accent)";
+        shareBtn.style.color = "var(--accent)";
+        setTimeout(() => {
+          shareBtnText.textContent = oldText;
+          shareBtn.style.borderColor = "";
+          shareBtn.style.color = "";
+        }, 2000);
+      });
+    } catch (e) {
+      console.warn("Could not copy pre-filled link:", e);
+    }
+  });
+
+  // Parse URL search parameters for pre-filling amount and tax options on startup
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const urlAmount = params.get("amount") || params.get("Amount");
+    const urlCoverTax = params.get("coverTax") || params.get("CoverTax");
+
+    if (urlCoverTax !== null) {
+      coverTax = urlCoverTax === "true" || urlCoverTax === "1";
+      coverTaxToggle.setAttribute("aria-checked", String(coverTax));
+    }
+
+    if (urlAmount !== null) {
+      const parsed = parseAmount(urlAmount);
+      if (parsed !== null) {
+        amountInput.value = parsed.toLocaleString("en-US");
+      }
+    }
+  } catch (e) {
+    console.warn("Error parsing prefilled URL search parameters:", e);
   }
 
   updatePreview();

@@ -446,6 +446,35 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* ── Share Button ────────────────────────────────────────────────────────── */
+.btn-share {
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: 1.5px dashed var(--surface-border);
+  border-radius: var(--radius-md);
+  color: var(--text-dim);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-share:hover {
+  background: var(--surface);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-share:active {
+  transform: scale(0.98);
+}
+
 /* ── Result Panel ────────────────────────────────────────────────────────── */
 .result {
   display: flex;
