@@ -57,7 +57,7 @@ window.BloxTipConfig = {
 6. Add **Read and Write** permissions.
 7. Save, generate the key, and make sure to copy and save the key somewhere safe.
 8. Go to your game's settings page on the Creator Dashboard, click the 3 dots, and click **Copy Universe ID**.
-9. On your game's settings page, navigate to **Monetization** > **Developer Products**. Click the **3 dots** in the top-right corner, open **External Purchase Settings**, and check/enable **Test Mode** (this is required for the Open Cloud API to dynamically generate developer products).
+9. On your game's settings page, navigate to **Monetization** > **Developer Products**. Click the **3 dots** in the top-right corner, open **External Purchase Settings**, click on **Show Test Mode Settings**, and enable **Enable Test Mode Settings** (this is required for the Open Cloud API to dynamically generate developer products).
 
 ### 2. Fork on GitHub
 1. Fork this GitHub repository to your own account.
