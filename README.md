@@ -63,7 +63,7 @@ window.BloxTipConfig = {
 
 1. Click the **Deploy with Vercel** button above.
 2. Sign in to Vercel (or create a free account).
-3. Choose a Git scope and click **Create** to clone the repository to your own GitHub account.
+3. Choose a Git provider and click **Create** to clone the repository to your own GitHub account.
 4. Under **Environment Variables**, fill in the required fields:
    * `ROBLOX_API_KEY`: The API key you generated in Step 1.
    * `UNIVERSE_ID`: Your Roblox game's Universe ID.
