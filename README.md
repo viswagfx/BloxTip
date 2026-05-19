@@ -57,11 +57,7 @@ window.BloxTipConfig = {
 8. Go to your game's settings page on the Creator Dashboard, click the 3 dots, and click **Copy Universe ID**.
 9. On your game's settings page, navigate to **Monetization** > **Developer Products**. Click the **3 dots** in the top-right corner, open **External Purchase Settings**, click on **Show Test Mode Settings**, and enable **Enable Test Mode Settings** (this is required for the Open Cloud API to dynamically generate developer products).
 
-### 2. Fork on GitHub
-1. Fork this GitHub repository to your own account.
-2. Customize `public/config.js` to change the theme, accent color, text, and titles to whatever you want.
-
-### 3. Vercel Setup
+### 2. Vercel Setup
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fviswagfx%2FBloxTip%2Ftree%2Fmain&env=ROBLOX_API_KEY,UNIVERSE_ID,PRODUCT_NAME_TEMPLATE,PRODUCT_DESCRIPTION_TEMPLATE&envDefaults=%7B%22PRODUCT_NAME_TEMPLATE%22%3A%22Donate%20%7Breceiving%7D%20Robux%22%2C%22PRODUCT_DESCRIPTION_TEMPLATE%22%3A%22Donated%20%7Breceiving%7D%20Robux%20via%20BloxTip.%22%7D)
 
