@@ -1,0 +1,9 @@
+{
+  "name": "bloxtip",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-hostable Roblox donation site — Vercel-powered",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

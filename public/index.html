@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloxTip</title>
+  <meta name="description"
+    content="Send any amount of Robux to a game creator instantly. Developer products are created on-the-fly via Roblox Open Cloud." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="bg-base" aria-hidden="true"></div>
+
+  <!-- GitHub Corner -->
+  <a href="#" id="githubCorner" class="github-corner" target="_blank" rel="noopener" aria-label="View source on GitHub" hidden>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+    </svg>
+  </a>
+
+  <main id="app">
+
+
+    <!-- Card -->
+    <div class="card" id="donateCard">
+      <div class="card__header">
+        <div class="card__icon" id="cardIconContainer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 3h10v2H7z" />
+            <path d="M8 5v1" />
+            <path d="M16 5v1" />
+            <path d="M8 6A2 2 0 0 0 6 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z" />
+            <g transform="translate(6.6, 8.6) scale(0.45)" stroke="none">
+              <path d="M19.4865 5.28457C20.1184 5.64792 20.6433 6.1714 21.0084 6.80227C21.3735 7.43313 21.5658 8.14908 21.566 8.87796V15.1331C21.5652 15.861 21.3725 16.5759 21.0074 17.2056C20.6423 17.8354 20.1178 18.3578 19.4865 18.7203L14.0798 21.852C13.4502 22.2148 12.7363 22.4058 12.0097 22.4058C11.283 22.4058 10.5691 22.2148 9.93952 21.852L4.51408 18.7203C3.8827 18.3579 3.35802 17.8356 2.99293 17.2058C2.62784 16.576 2.43525 15.8611 2.43457 15.1331V8.87796C2.43457 8.14904 2.62682 7.433 2.99193 6.8021C3.35703 6.1712 3.88207 5.64776 4.51408 5.28457L9.9208 2.15491C10.5523 1.78763 11.2698 1.59415 12.0003 1.59415C12.7308 1.59415 13.4483 1.78763 14.0798 2.15491L19.4865 5.28457ZM10.6549 3.57522L5.37292 6.62586C4.96415 6.86186 4.62477 7.20138 4.38894 7.61025C4.15311 8.01912 4.02915 8.4829 4.02955 8.95491V15.052C4.02936 15.524 4.15341 15.9877 4.38922 16.3965C4.62502 16.8053 4.96429 17.1449 5.37292 17.3811L10.6549 20.4296C11.0636 20.6656 11.5273 20.7899 11.9993 20.7899C12.4713 20.7899 12.9349 20.6656 13.3437 20.4296L18.6256 17.3811C19.0343 17.1449 19.3735 16.8053 19.6093 16.3965C19.8451 15.9877 19.9692 15.524 19.969 15.052V8.95491C19.9694 8.4829 19.8454 8.01912 19.6096 7.61025C19.3738 7.20138 19.0344 6.86186 18.6256 6.62586L13.3437 3.57522C12.9349 3.33923 12.4713 3.21499 11.9993 3.21499C11.5273 3.21499 11.0636 3.33923 10.6549 3.57522ZM13.1024 5.28041L17.2615 7.68433C17.5977 7.87844 17.8769 8.15761 18.0711 8.49379C18.2653 8.82997 18.3676 9.21132 18.3678 9.59955V14.4095C18.3679 14.7975 18.2656 15.1786 18.0714 15.5145C17.8772 15.8504 17.5978 16.1292 17.2615 16.3226L13.1024 18.7286C12.7668 18.9226 12.3859 19.0248 11.9982 19.0248C11.6105 19.0248 11.2297 18.9226 10.894 18.7286L6.73499 16.3226C6.3989 16.129 6.11982 15.8502 5.92594 15.5143C5.73207 15.1784 5.63025 14.7973 5.63077 14.4095V9.59955C5.63052 9.21148 5.73243 8.83018 5.92626 8.49398C6.1201 8.15779 6.39902 7.87854 6.73499 7.68433L10.894 5.28041C11.2297 5.08638 11.6105 4.98422 11.9982 4.98422C12.3859 4.98422 12.7668 5.08638 13.1024 5.28041ZM9.60887 14.3949H14.3917V9.61203H9.60887V14.3949Z" fill="currentColor"/>
+            </g>
+          </svg>
+        </div>
+        <h1 class="card__title" id="cardTitle">BloxTip</h1>
+        <p class="card__subtitle" id="cardSubtitle">Send any amount of Robux.</p>
+      </div>
+
+      <!-- Amount Input -->
+      <div class="input-group" id="inputGroup">
+        <label class="input-group__label" for="amountInput">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.4865 5.28457C20.1184 5.64792 20.6433 6.1714 21.0084 6.80227C21.3735 7.43313 21.5658 8.14908 21.566 8.87796V15.1331C21.5652 15.861 21.3725 16.5759 21.0074 17.2056C20.6423 17.8354 20.1178 18.3578 19.4865 18.7203L14.0798 21.852C13.4502 22.2148 12.7363 22.4058 12.0097 22.4058C11.283 22.4058 10.5691 22.2148 9.93952 21.852L4.51408 18.7203C3.8827 18.3579 3.35802 17.8356 2.99293 17.2058C2.62784 16.576 2.43525 15.8611 2.43457 15.1331V8.87796C2.43457 8.14904 2.62682 7.433 2.99193 6.8021C3.35703 6.1712 3.88207 5.64776 4.51408 5.28457L9.9208 2.15491C10.5523 1.78763 11.2698 1.59415 12.0003 1.59415C12.7308 1.59415 13.4483 1.78763 14.0798 2.15491L19.4865 5.28457ZM10.6549 3.57522L5.37292 6.62586C4.96415 6.86186 4.62477 7.20138 4.38894 7.61025C4.15311 8.01912 4.02915 8.4829 4.02955 8.95491V15.052C4.02936 15.524 4.15341 15.9877 4.38922 16.3965C4.62502 16.8053 4.96429 17.1449 5.37292 17.3811L10.6549 20.4296C11.0636 20.6656 11.5273 20.7899 11.9993 20.7899C12.4713 20.7899 12.9349 20.6656 13.3437 20.4296L18.6256 17.3811C19.0343 17.1449 19.3735 16.8053 19.6093 16.3965C19.8451 15.9877 19.9692 15.524 19.969 15.052V8.95491C19.9694 8.4829 19.8454 8.01912 19.6096 7.61025C19.3738 7.20138 19.0344 6.86186 18.6256 6.62586L13.3437 3.57522C12.9349 3.33923 12.4713 3.21499 11.9993 3.21499C11.5273 3.21499 11.0636 3.33923 10.6549 3.57522ZM13.1024 5.28041L17.2615 7.68433C17.5977 7.87844 17.8769 8.15761 18.0711 8.49379C18.2653 8.82997 18.3676 9.21132 18.3678 9.59955V14.4095C18.3679 14.7975 18.2656 15.1786 18.0714 15.5145C17.8772 15.8504 17.5978 16.1292 17.2615 16.3226L13.1024 18.7286C12.7668 18.9226 12.3859 19.0248 11.9982 19.0248C11.6105 19.0248 11.2297 18.9226 10.894 18.7286L6.73499 16.3226C6.3989 16.129 6.11982 15.8502 5.92594 15.5143C5.73207 15.1784 5.63025 14.7973 5.63077 14.4095V9.59955C5.63052 9.21148 5.73243 8.83018 5.92626 8.49398C6.1201 8.15779 6.39902 7.87854 6.73499 7.68433L10.894 5.28041C11.2297 5.08638 11.6105 4.98422 11.9982 4.98422C12.3859 4.98422 12.7668 5.08638 13.1024 5.28041ZM9.60887 14.3949H14.3917V9.61203H9.60887V14.3949Z" fill="currentColor"/>
+          </svg>
+          Robux Amount
+        </label>
+        <div class="input-wrapper">
+          <div class="input-prefix" style="display: flex; align-items: center; justify-content: center;">
+            <svg class="robux-icon" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+              <path d="M19.4865 5.28457C20.1184 5.64792 20.6433 6.1714 21.0084 6.80227C21.3735 7.43313 21.5658 8.14908 21.566 8.87796V15.1331C21.5652 15.861 21.3725 16.5759 21.0074 17.2056C20.6423 17.8354 20.1178 18.3578 19.4865 18.7203L14.0798 21.852C13.4502 22.2148 12.7363 22.4058 12.0097 22.4058C11.283 22.4058 10.5691 22.2148 9.93952 21.852L4.51408 18.7203C3.8827 18.3579 3.35802 17.8356 2.99293 17.2058C2.62784 16.576 2.43525 15.8611 2.43457 15.1331V8.87796C2.43457 8.14904 2.62682 7.433 2.99193 6.8021C3.35703 6.1712 3.88207 5.64776 4.51408 5.28457L9.9208 2.15491C10.5523 1.78763 11.2698 1.59415 12.0003 1.59415C12.7308 1.59415 13.4483 1.78763 14.0798 2.15491L19.4865 5.28457ZM10.6549 3.57522L5.37292 6.62586C4.96415 6.86186 4.62477 7.20138 4.38894 7.61025C4.15311 8.01912 4.02915 8.4829 4.02955 8.95491V15.052C4.02936 15.524 4.15341 15.9877 4.38922 16.3965C4.62502 16.8053 4.96429 17.1449 5.37292 17.3811L10.6549 20.4296C11.0636 20.6656 11.5273 20.7899 11.9993 20.7899C12.4713 20.7899 12.9349 20.6656 13.3437 20.4296L18.6256 17.3811C19.0343 17.1449 19.3735 16.8053 19.6093 16.3965C19.8451 15.9877 19.9692 15.524 19.969 15.052V8.95491C19.9694 8.4829 19.8454 8.01912 19.6096 7.61025C19.3738 7.20138 19.0344 6.86186 18.6256 6.62586L13.3437 3.57522C12.9349 3.33923 12.4713 3.21499 11.9993 3.21499C11.5273 3.21499 11.0636 3.33923 10.6549 3.57522ZM13.1024 5.28041L17.2615 7.68433C17.5977 7.87844 17.8769 8.15761 18.0711 8.49379C18.2653 8.82997 18.3676 9.21132 18.3678 9.59955V14.4095C18.3679 14.7975 18.2656 15.1786 18.0714 15.5145C17.8772 15.8504 17.5978 16.1292 17.2615 16.3226L13.1024 18.7286C12.7668 18.9226 12.3859 19.0248 11.9982 19.0248C11.6105 19.0248 11.2297 18.9226 10.894 18.7286L6.73499 16.3226C6.3989 16.129 6.11982 15.8502 5.92594 15.5143C5.73207 15.1784 5.63025 14.7973 5.63077 14.4095V9.59955C5.63052 9.21148 5.73243 8.83018 5.92626 8.49398C6.1201 8.15779 6.39902 7.87854 6.73499 7.68433L10.894 5.28041C11.2297 5.08638 11.6105 4.98422 11.9982 4.98422C12.3859 4.98422 12.7668 5.08638 13.1024 5.28041ZM9.60887 14.3949H14.3917V9.61203H9.60887V14.3949Z"/>
+            </svg>
+          </div>
+          <input type="text" id="amountInput" class="input-field" placeholder="Enter amount..." inputmode="numeric"
+            autocomplete="off" spellcheck="false" />
+          <div class="input-glow"></div>
+        </div>
+        <p class="input-hint" id="inputHint">Min: R$1 · Max: R$1,000,000,000</p>
+      </div>
+
+      <!-- Quick amounts -->
+      <div class="quick-amounts" id="quickAmounts">
+        <button class="quick-btn" data-amount="10">R$10</button>
+        <button class="quick-btn" data-amount="50">R$50</button>
+        <button class="quick-btn" data-amount="100">R$100</button>
+        <button class="quick-btn" data-amount="500">R$500</button>
+        <button class="quick-btn" data-amount="1000">R$1K</button>
+        <button class="quick-btn" data-amount="10000">R$10K</button>
+      </div>
+
+      <!-- Cover Tax Toggle -->
+      <div class="toggle-row" id="toggleRow">
+        <div class="toggle-info">
+          <span class="toggle-label">Cover marketplace tax</span>
+          <span class="toggle-desc">Pay extra so the creator gets the full amount (Roblox takes 30%)</span>
+        </div>
+        <button class="toggle" id="coverTaxToggle" role="switch" aria-checked="true" aria-label="Cover marketplace tax">
+          <span class="toggle__track">
+            <span class="toggle__thumb"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Preview -->
+      <div class="preview" id="preview">
+        <div class="preview__row">
+          <span class="preview__label">You pay</span>
+          <span class="preview__value" id="previewPrice">—</span>
+        </div>
+        <div class="preview__divider"></div>
+        <div class="preview__row preview__row--highlight">
+          <span class="preview__label">Creator receives</span>
+          <span class="preview__value preview__value--accent" id="previewReceived">—</span>
+        </div>
+      </div>
+
+      <!-- Send Button -->
+      <button class="btn-send" id="sendBtn" disabled>
+        <span class="btn-send__text" id="sendBtnText">Enter an amount</span>
+        <div class="btn-send__spinner" id="sendSpinner" hidden>
+          <div class="spinner"></div>
+        </div>
+      </button>
+
+      <!-- Result panel (hidden initially) -->
+      <div class="result" id="result" hidden>
+        <div class="result__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+        </div>
+        <p class="result__title">Thank you for donating!</p>
+        <p class="result__desc">We've opened a new tab to Roblox for your purchase. If it didn't open, click below.</p>
+        <a class="result__link" id="resultLink" href="#" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" width="18" height="18">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+          Buy on Roblox
+        </a>
+        <div class="result__details">
+          <span>Product ID: <strong id="resultProductId">—</strong></span>
+          <span class="result__sep">·</span>
+          <span>Price: <strong id="resultPriceTag">—</strong></span>
+          <span class="result__sep">·</span>
+          <span>Receives: <strong id="resultReceivedTag">—</strong></span>
+        </div>
+        <button class="result__reset" id="resetBtn">← Send another</button>
+      </div>
+
+      <!-- Error toast -->
+      <div class="error-toast" id="errorToast" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" width="18" height="18">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="15" y1="9" x2="9" y2="15" />
+          <line x1="9" y1="9" x2="15" y2="15" />
+        </svg>
+        <span id="errorText">Something went wrong.</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Powered by <a href="https://create.roblox.com/docs/cloud/reference/features/developer-products" target="_blank"
+          rel="noopener">Roblox Open Cloud API</a></p>
+      <p style="margin-top: 6px;" id="customFooterP">Made with ❤️ by <a href="https://x.com/Vis3d_" target="_blank"
+          rel="noopener">Viswa</a></p>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
