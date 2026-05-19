@@ -1,5 +1,7 @@
 # <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Robux_2019_Logo_gold.svg" width="28" height="28" valign="middle" style="margin-bottom: 4px;" /> BloxTip
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fviswagfx%2FBloxTip%2Ftree%2Fmain&env=ROBLOX_API_KEY,UNIVERSE_ID,PRODUCT_NAME_TEMPLATE,PRODUCT_DESCRIPTION_TEMPLATE&envDefaults=%7B%22PRODUCT_NAME_TEMPLATE%22%3A%22Donate%20%7Breceiving%7D%20Robux%22%2C%22PRODUCT_DESCRIPTION_TEMPLATE%22%3A%22Donated%20%7Breceiving%7D%20Robux%20via%20BloxTip.%22%7D)
+
 A super clean, customizable web donation page for Roblox creators. It uses the **Roblox Open Cloud Developer Products API** to generate developer products on-the-fly, so your players can donate any custom amount of Robux they want.
 
 ## 🚀 Features
@@ -37,9 +39,8 @@ window.BloxTipConfig = {
 
   QuickAmounts: [10, 50, 100, 500, 1000, 10000], // Preset button values
 
-  FooterText: "Made with ❤️ by Viswa",
-  FooterLink: "https://x.com/Vis3d_",
-  GithubRepo: "https://github.com/viswagfx/BloxTip" // Puts a GitHub link in the top right
+  ShowCredits: true, // Toggle the "Made with ❤️ by Viswa" footer credit
+  ShowGithub: true // Toggle the GitHub link in the footer
 };
 ```
 
