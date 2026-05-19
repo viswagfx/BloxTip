@@ -65,8 +65,10 @@ window.BloxTipConfig = {
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fviswagfx%2FBloxTip%2Ftree%2Fmain&env=ROBLOX_API_KEY,UNIVERSE_ID,PRODUCT_NAME_TEMPLATE,PRODUCT_DESCRIPTION_TEMPLATE&envDefaults=%7B%22PRODUCT_NAME_TEMPLATE%22%3A%22Donate%20%7Breceiving%7D%20Robux%22%2C%22PRODUCT_DESCRIPTION_TEMPLATE%22%3A%22Donated%20%7Breceiving%7D%20Robux%20via%20BloxTip.%22%7D)
 
-1. Create a free account on **[Vercel](https://vercel.com/)** and import your forked repository.
-2. Add these two **Environment Variables** in your Vercel project settings:
+1. Click the **Deploy with Vercel** button above.
+2. Sign in to Vercel (or create a free account).
+3. Choose a Git scope and click **Create** to clone the repository to your own GitHub account.
+4. Under **Environment Variables**, fill in the required fields:
    * `ROBLOX_API_KEY`: The API key you generated in Step 1.
    * `UNIVERSE_ID`: Your Roblox game's Universe ID.
-3. Click **Deploy** and you're ready to go! Vercel will host your donation page completely free.
+5. Click **Deploy** and you're ready to go! Vercel will build, host, and run your donation page completely free.
