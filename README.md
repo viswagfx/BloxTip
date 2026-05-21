@@ -51,7 +51,7 @@ window.BloxTipConfig = {
 2. Click on **All Tools** > click on **API Keys**.
 3. Click **Create API Key** and give it a name.
 4. Under **Access Permissions**, choose **Developer Products**.
-5. Turn on **Restrict by Experience** and choose the game you want to use (either owned by you or your group).
+5. Turn on **Restrict by Experience** and choose the game (must be public) you want to use (either owned by you or your group).
 6. Add **Read and Write** permissions.
 7. Save, generate the key, and make sure to copy and save the key somewhere safe.
 8. Go to your game's settings page on the Creator Dashboard, click the 3 dots, and click **Copy Universe ID**.
